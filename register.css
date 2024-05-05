@@ -1,0 +1,86 @@
+/* Section: Design Block */
+.bg-image {
+    height: 700px;
+    
+    
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('p1.jpeg');
+    background-size: cover;
+    /* background-position: center; */
+  }
+  
+  .card {
+    margin-top: center;
+    backdrop-filter: blur(4px);
+    height: 45vh;
+    width: 45vh;
+  }
+  
+  .g {
+    font-size: 23px;
+    margin: auto;
+    width: 60%;
+  
+    padding: 10px;
+    margin-top: center;
+  }
+  
+  @media (max-width: 768px) {
+    .bg-image {
+      height: 200px;
+    }
+  
+    .card {
+      margin-top: 50px;
+    }
+  
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+  }

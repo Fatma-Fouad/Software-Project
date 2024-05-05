@@ -1,0 +1,76 @@
+body {
+    background-color: #10100f;
+    
+    font-family: Arial, sans-serif;
+    color: #fff;
+    
+  }
+  body {
+    background-image: url('ee.jpg');
+    background-size: cover; 
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   
+  }
+  
+  .porsche-logo {
+    display: block;
+    margin: 0 auto 20px;
+    /* Center the logo */
+    width: 150px;
+  }
+  
+  .porsche-title {
+    color: #c00;
+    /* Porsche red */
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .porsche-label {
+    font-weight: bold;
+    color: #dceadf;
+    /* Dark gray */
+  }
+  
+  .form-control {
+    border: 2px solid #c00;
+    /* Porsche red */
+    border-radius: 5px;
+    color: #e7d0d0;
+    /* Black text */
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .btn-primary {
+    background-color: #c00;
+    
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a00;
+    
+  }
+  
+  .porsche-info {
+    text-align: center;
+    font-style: italic;
+    color: #ccc;
+    
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+  }

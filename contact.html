@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Porsche</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="Porsche-Logo.jpg" alt="Porsche Logo" class="porsche-logo">
+    
+    <h1 class="porsche-title">Contact Porsche</h1>
+      <form action="submit_contact_form.php" method="POST">
+      <div class="form-group">
+        <div class="col-xl-6">
+         
+          <div class="row g-4">
+            <div class="col-6 mb-3">
+              <label for="exampleFormControlInput1" class="form-label">First name</label><br>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="john"required><br><br>
+            </div>
+            <div class="col-6 mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Last name</label><br>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Doe"required><br><br>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label><br>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"required><br><br>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone</label><br>
+            <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="+20110235467"required><br><br>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Country</label><br>
+            <select class="form-select" aria-label="Default select example">
+              <option value="1">Egypt</option>
+              <option value="2">Ksa</option>
+              <option value="3">Uae</option>
+              <option value="4">USA</option>
+              <option value="5">Uk</option>
+              <option value="6">Australia</option>
+              <option value="7">Germany</option>
+              <option value="8">France</option>
+              <option value="9">Japan</option>
+              <option value="10">Brazil</option>
+              <option value="11">India</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label><br>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-dark">Send Message</button>
+        </div>
+      </div>
+
+  </div>
+  </main>
+
+  <!-- back home -->
+
+  </form>
+
+  <div class="mt-5">
+    <h3>Visit Us</h3>
+    <p>Porsche Showroom, 123 Porsche Avenue, City, Country</p>
+
+    </d <!-- Google Maps API -->
+    <i class="fa-solid fa-location-pin h3 pe-2"></i>
+
+    <div class="aos-item" data-aos="fade-up" data-aos-delay="800">
+      <div class="mt-4 w-100 aos-item__inner">
+        <iframe class="hvr-shadow" width="100%" height="345" frameborder="0" scrolling="no" marginheight="0"
+          marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+            href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe>
+        
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" id="backButton">Back</button>
+  <script>
+      function validateForm() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var country = document.getElementById("country").value;
+        var message = document.getElementById("message").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        
+
+        if (firstName.trim() === "") {
+            alert("Please fill out the First Name field.");
+            return false;
+          }
+          if (lastName.trim() === "") {
+            alert("Please fill out the Last Name field.");
+            return false;
+          }
+          if (country.trim() === "") {
+            alert("Please fill out the Country field.");
+            return false;
+          }
+          if (message.trim() === "") {
+            alert("Please fill out the Message field.");
+            return false;
+          }
+          if (phone.trim() === "") {
+            alert("Please fill out the Phone field.");
+            return false;
+          }
+          if (email.trim() === "") {
+            alert("Please fill out the Email field.");
+            return false;
+          }
+
+          // Check if phone contains only integers
+          if (!/^\d+$/.test(phone)) {
+            alert("Phone number should contain numbers only.");
+            return false;
+          }
+
+          // Check if email contains @ and .com
+          if (!email.includes("@")) {
+            alert("Please include @ in the email address.");
+            return false;
+          }
+          if (!email.includes(".com")) {
+            alert("Please include .com in the email address.");
+            return false;
+          }
+
+          // If all fields are valid, submit the form
+          return true;
+        }
+        
+  // Get the button element
+  var backButton = document.getElementById("backButton");
+
+  // Add event listener to the button
+  backButton.addEventListener("click", function() {
+    // Redirect to home.html
+    window.location.href = "home.html";
+  });
+</script>
+        
+      
+  </script>
+  <footer id="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 class="pb-3"><i class="fa-solid fa-paper-plane pe-1"></i> Stay updated</h5>
+          <form>
+            <input type="text" class="w-100 mb-2 form-control" name="" placeholder="Email ID">
+            <button class="w-100 btn btn-dark">Subscribe now</button>
+ 
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    <a href="#" onclick="openFacebookPage(); return false;">
+      <img src="facebook.jpg" alt="Facebook Icon" style="width: 50px; height: 50px;">
+    </a>
+
+    <!-- Instagram icon -->
+    <a href="#" onclick="openInstagramPage(); return false;">
+      <img src="ins.jpg" alt="Instagram Icon" style="width: 50px; height: 50px;">
+    </a>
+    <a href="mailto:contact@porsche.co.uk">
+      <img src="mail.jpg" alt="mail" style="width: 50px; height: 50px;">
+    </a>
+
+    <a href="tel:+443457911911">
+      <img src="call.jpg" alt="call" style="width: 50px; height: 50px;">
+    </a>
+    <script>
+      function openFacebookPage() {
+       
+ window.open('https://www.facebook.com/porsche', '_blank');
+      }
+
+      // Function to open the Instagram page
+      function openInstagramPage() {
+        // Replace 'your-instagram-page-url' with your actual Instagram page URL
+        window.open('https://www.instagram.com/porsche/?hl=en', '_blank');
+      }
+
+
+    </script>
+    
+  </footer>
